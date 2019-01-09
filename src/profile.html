@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bootstrap 4 Blog Admin UI</title>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand navbar-expand-lg bg-dark navbar-dark">
+        <div class="container">
+            <a href="#home" class="navbar-brand">Biogen</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#menu">
+                <i class="navbar-toggler-icon"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="posts.html" class="nav-link">Posts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="categories.html" class="nav-link">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="users.html" class="nav-link">Users</a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown mr-2">
+                        <a href="#" class="nav-link dropdown-toggle" id="dropmenu" data-toggle="dropdown">
+                            <i class="fa fa-user mr-2"></i>Welcome Hoang
+                        </a>
+
+                        <div class="dropdown-menu" aria-labelledby="dropmenu">
+                            <a href="profile.html" class="dropdown-item">
+                                <i class="fa fa-user-circle mr-2"></i>Profile
+                            </a>
+
+                            <a href="settings.html" class="dropdown-item">
+                                <i class="fa fa-gear mr-2"></i>Settings
+                            </a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="login.html" class="nav-link">
+                            <i class="fa fa-user-o mr-2"></i>Logout
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-success text-white" id="main-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h1>
+                        <i class="fa fa-user mr-2"></i>Edit Profile
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="bg-light" id="section-button">
+        <div class="container py-3 mb-3">
+            <div class="row">
+                <div class="col-md-6">
+                    <a href="users.html" class="text-secondary">
+                        <i class="fa fa-arrow-left"></i> Back to Dashboard
+                    </a>
+                </div>
+
+                <div class="col-md-3 ml-auto">
+                    <button class="btn btn-success btn-block">
+                        <i class="fa fa-lock mr-2"></i>Change Password
+                    </button>
+                </div>
+
+                <div class="col-md-3 ml-auto">
+                    <button class="btn btn-danger btn-block">
+                        Change Password
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="main-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-title">
+                                Edit Profile
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <form>
+                                <div class="form-control mb-3">
+                                    <label>Name</label>
+                                    <input type="text" value="Nguyen Hoang" class="form-control">
+                                </div>
+                                <div class="form-control mb-3">
+                                    <label>Email</label>
+                                    <input type="text" value="nguyenhoang@gmail.com" class="form-control">
+                                </div>
+                                <div class="form-control mb-3">
+                                    <label>Bio</label>
+                                    <textarea id="editor1">
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, consequuntur aperiam inventore aliquid quasi beatae. Ex aliquam illum distinctio sint eos deserunt exercitationem dolorum, optio nam deleniti aspernatur beatae odio?
+                                    </textarea>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <h1>Your Avatar</h1>
+                    <img src="./img/avatar.png" alt="avatar" width="100%" class="mb-4">
+                    <button class="btn btn-primary btn-block">Edit Image</button>
+                    <button class="btn btn-danger btn-block">Delete Image</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="main-footer">
+        <div class="bg-dark main-footer__title align-item-center">
+            <p class="text-center text-white">
+                Made by Hoang
+            </p>
+        </div>
+    </footer>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://cdn.ckeditor.com/4.11.1/standard/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace('editor1');
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bootstrap 4 Blog Admin UI</title>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand navbar-expand-lg bg-dark navbar-dark">
+        <div class="container">
+            <a href="#home" class="navbar-brand">Biogen</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#menu">
+                <i class="navbar-toggler-icon"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="posts.html" class="nav-link">Posts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="categories.html" class="nav-link">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="users.html" class="nav-link">Users</a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown mr-2">
+                        <a href="#" class="nav-link dropdown-toggle" id="dropmenu" data-toggle="dropdown">
+                            <i class="fa fa-user mr-2"></i>Welcome Hoang
+                        </a>
+
+                        <div class="dropdown-menu" aria-labelledby="dropmenu">
+                            <a href="profile.html" class="dropdown-item">
+                                <i class="fa fa-user-circle mr-2"></i>Profile
+                            </a>
+
+                            <a href="settings.html" class="dropdown-item">
+                                <i class="fa fa-gear mr-2"></i>Settings
+                            </a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="login.html" class="nav-link">
+                            <i class="fa fa-user-o mr-2"></i>Logout
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-primary text-white" id="main-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h1>
+                        <i class="fa fa-gear mr-2"></i>Dashboard
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="bg-light" id="section-button">
+        <div class="container py-3 mb-3">
+            <div class="row">
+                <div class="col-md-4">
+                    <a href="#" class="btn btn-primary btn-block" data-toggle="modal" data-target="#id-add-post">
+                        <i class="fa fa-plus mr-2"></i>Add Post
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="#" class="btn btn-success btn-block" data-toggle="modal" data-target="#id-add-category">
+                        <i class="fa fa-plus mr-2"></i>Add Category
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="#" class="btn btn-warning btn-block" data-toggle="modal" data-target="#id-add-user">
+                        <i class="fa fa-plus mr-2"></i>Add User
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- POST MODAL-->
+    <div class="modal fade" id="id-add-post">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title">Add Post</div>
+                    <button class="close" data-dismiss="modal">
+                        <span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label>Title</label>
+                            <input type="text" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Body</label>
+                            <textarea id="editor1"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="main-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9">
+                    <table class="table table-striped">
+                        <thead>
+                            <h2>Lastest Posts</h2>
+                            <tr class="bg-dark text-white">
+                                <th scope="col">#</th>
+                                <th scope="col">Title</th>
+                                <th scope="col">Category</th>
+                                <th scope="col">Date Posted</th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td scope="row">1</td>
+                                <td>Post Six</td>
+                                <td>Headth & Wellness</td>
+                                <td>July 16, 2019</td>
+                                <td>
+                                    <a href="details.html" class="btn btn-secondary">
+                                        Detail
+                                    </a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td scope="row">1</td>
+                                <td>Post Six</td>
+                                <td>Headth & Wellness</td>
+                                <td>July 16, 2019</td>
+                                <td>
+                                    <a href="details.html" class="btn btn-secondary">
+                                        Detail
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="row">1</td>
+                                <td>Post Six</td>
+                                <td>Headth & Wellness</td>
+                                <td>July 16, 2019</td>
+                                <td>
+                                    <a href="details.html" class="btn btn-secondary">
+                                        Detail
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="row">1</td>
+                                <td>Post Six</td>
+                                <td>Headth & Wellness</td>
+                                <td>July 16, 2019</td>
+                                <td>
+                                    <a href="details.html" class="btn btn-secondary">
+                                        Detail
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="row">1</td>
+                                <td>Post Six</td>
+                                <td>Headth & Wellness</td>
+                                <td>July 16, 2019</td>
+                                <td>
+                                    <a href="details.html" class="btn btn-secondary">
+                                        Detail
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="row">1</td>
+                                <td>Post Six</td>
+                                <td>Headth & Wellness</td>
+                                <td>July 16, 2019</td>
+                                <td>
+                                    <a href="details.html" class="btn btn-secondary">
+                                        Detail
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="row">1</td>
+                                <td>Post Six</td>
+                                <td>Headth & Wellness</td>
+                                <td>July 16, 2019</td>
+                                <td>
+                                    <a href="details.html" class="btn btn-secondary">
+                                        Detail
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-lg-3">
+                    <div class="card text-white bg-primary text-center mb-4">
+                        <div class="card-body">
+                            <h4>Posts</h4>
+                            <h2>
+                                <i class="fa fa-pencil mr-2"></i>6
+                            </h2>
+                            <a href="#" class="btn btn-outline-light">View</a>
+                        </div>
+                    </div>
+
+                    <div class="card text-white bg-success text-center mb-4">
+                        <div class="card-body">
+                            <h4>Categories</h4>
+                            <h2>
+                                <i class="fa fa-folder-o mr-2"></i>4
+                            </h2>
+                            <a href="#" class="btn btn-outline-light">View</a>
+                        </div>
+                    </div>
+
+                    <div class="card text-white bg-warning text-center mb-4">
+                        <div class="card-body">
+                            <h4>Users</h4>
+                            <h2>
+                                <i class="fa fa-user-plus mr-2"></i>4
+                            </h2>
+                            <a href="#" class="btn btn-outline-light">View</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- CATEGORY MODAL-->
+    <div class="modal fade" id="id-add-category">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title">Add Post</div>
+                    <button class="close" data-dismiss="modal">
+                        <span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label>Title</label>
+                            <input type="text" class="form-control">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- User MODAL-->
+    <div class="modal fade" id="id-add-user">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title">Add Post</div>
+                    <button class="close" data-dismiss="modal">
+                        <span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label>Title</label>
+                            <input type="text" class="form-control">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="main-footer">
+        <div class="bg-dark main-footer__title align-item-center">
+            <p class="text-center text-white">
+                Made by Hoang
+            </p>
+        </div>
+    </footer>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://cdn.ckeditor.com/4.11.1/standard/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace('editor1');
+    </script>
+</body>
+
+</html>
